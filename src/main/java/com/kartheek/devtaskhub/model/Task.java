@@ -1,30 +1,37 @@
-package com.kartheek.taskmanager.model;
+package com.kartheek.devtaskhub.model;
 
-import com.kartheek.taskmanager.enums.Role;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDateTime;
 
 @Entity
-@Data
+@Data // Generates getters, setters, toString, equals, hashCode
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "users")
-public class User {
+public class Task {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String username;
-    private String email;
-    private String password;
+    private String title;
+    private String description;
+    private boolean completed;
+
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
-    @Enumerated(value = EnumType.STRING)
-    private Role role;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    @JsonIgnore
+    private User assignedUser;
+
+    @ManyToOne
+    @JoinColumn(name = "created_by")
+    @JsonIgnore
+    private User createdBy;
 
     @PrePersist
     public void onCreate() {
@@ -35,4 +42,7 @@ public class User {
     public void onUpdate() {
         this.updatedAt = LocalDateTime.now();
     }
+
+
+
 }

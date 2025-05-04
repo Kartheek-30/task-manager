@@ -1,7 +1,7 @@
-package com.kartheek.taskmanager.service;
+package com.kartheek.devtaskhub.service;
 
-import com.kartheek.taskmanager.model.User;
-import com.kartheek.taskmanager.repository.UserRepository;
+import com.kartheek.devtaskhub.model.User;
+import com.kartheek.devtaskhub.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

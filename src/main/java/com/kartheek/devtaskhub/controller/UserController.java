@@ -1,8 +1,8 @@
-package com.kartheek.taskmanager.controller;
+package com.kartheek.devtaskhub.controller;
 
 
-import com.kartheek.taskmanager.model.User;
-import com.kartheek.taskmanager.service.UserService;
+import com.kartheek.devtaskhub.model.User;
+import com.kartheek.devtaskhub.service.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

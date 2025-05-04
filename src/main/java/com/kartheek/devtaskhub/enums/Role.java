@@ -1,4 +1,4 @@
-package com.kartheek.taskmanager.enums;
+package com.kartheek.devtaskhub.enums;
 
 public enum Role{
     ADMIN,

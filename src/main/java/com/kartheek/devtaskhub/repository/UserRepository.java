@@ -1,6 +1,6 @@
-package com.kartheek.taskmanager.repository;
+package com.kartheek.devtaskhub.repository;
 
-import com.kartheek.taskmanager.model.User;
+import com.kartheek.devtaskhub.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
